@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+
+  "name": "Wiki Redirector",
+  "description": "Redirects to desktop version of wikipedia",
+  "version": "1.0",
+  "icons": {
+      "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+
+  "host_permissions": [
+    "*://*.m.wikipedia.org/*"
+  ]
+}
